@@ -20,11 +20,15 @@ app.get('/', function(req, res) {
 app.use('/reflect/?', express.static('./reflect.json'));
 
 app.get('/file/?', function(req, res) {
-	var reflect = JSON.parse(fs.readFileSync('./reflect.json', 'utf8'));
 	var query = req.query;
+	console.log("Received request for file: " + JSON.stringify(query));
 
-	if(reflect[query.id] !== undefined && reflect[query.id].target === query.target) {
-		res.write(fs.readFileSync(reflect[query.id].target, 'utf8'));
+	var reflect = JSON.parse(fs.readFileSync('./reflect.json', 'utf8'));
+
+	if(reflect[query.id] !== undefined && reflect[query.id].path === query.path) {
+		// Replace '~' if needed
+		var path = reflect[query.id].path.replace('~', process.env.HOME);
+		res.write(fs.readFileSync(path, 'utf8'));
 	}
 	else {
 		console.log('---------------------------------------------------------------------');

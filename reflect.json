@@ -1,28 +1,28 @@
 {
   "vimrc": {
     "type": "file", 
-    "target": "~/.vimrc"
+    "path": "~/.vimrc"
   }, 
   "apt-packages": {
     "command": "sudo apt-get install", 
-    "packages": "gcc make python python-dev ipython python-pip python-virtualenv git screen tmux vim nano", 
+    "packages": "gcc make python python-dev ipython python-pip python-virtualenv git screen tmux vim nano libfreetype6-dev libpng12-dev", 
     "type": "packages"
   }, 
   "tmux-conf": {
     "type": "file", 
-    "target": "~/.tmux.conf"
+    "path": "~/.tmux.conf"
   }, 
   "screenrc": {
     "type": "file", 
-    "target": "~/.screenrc"
+    "path": "~/.screenrc"
   }, 
   "bashrc": {
     "type": "file", 
-    "target": "~/.bashrc"
+    "path": "~/.bashrc"
   }, 
   "pip": {
     "command": "sudo pip install", 
-    "packages": "numpy matplotlib", 
+    "packages": "ipdb", 
     "type": "packages"
   }
 }
