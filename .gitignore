@@ -1,0 +1,7 @@
+.*.sw*
+/env
+/node_modules
+
+*.pyc
+
+*~
