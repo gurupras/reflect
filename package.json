@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Helps set up a new machine",
   "main": "reflect-server.js",
-  "dependencies": {},
+  "dependencies": {
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "morgan": "^1.7.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1"
   },
