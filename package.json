@@ -1,0 +1,26 @@
+{
+  "name": "reflect",
+  "version": "1.0.0",
+  "description": "Helps set up a new machine",
+  "main": "reflect-server.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurupras/reflect.git"
+  },
+  "keywords": [
+    "cookbook"
+  ],
+  "author": "Guru",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gurupras/reflect/issues"
+  },
+  "homepage": "https://github.com/gurupras/reflect#readme"
+}
