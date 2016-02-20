@@ -24,5 +24,9 @@
     "command": "sudo pip install", 
     "packages": "ipdb", 
     "type": "packages"
-  }
+  },
+	"ssh-config": {
+		"type": "file",
+		"path": "~/.ssh/config"
+	}
 }
