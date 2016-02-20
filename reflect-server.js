@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var app = express();
 var fs = require('fs');
 var compression = require('compression');
+var crypto = require('crypto');
 
 var http = require('http').createServer(app);
 
@@ -27,10 +28,19 @@ app.get('/file/?', function(req, res) {
 
 	if(reflect[query.id] !== undefined && reflect[query.id].path === query.path) {
 		// Replace '~' if needed
+		var hash = crypto.createHash('sha256');
 		var path = reflect[query.id].path.replace('~', process.env.HOME);
 		console.log('Serving file in path: ' + path);
 		var data = fs.readFileSync(path, 'utf8');
-		res.send(data);
+		hash.update(data);
+		var hex = hash.digest('hex');
+		if(hex !== query.hash) {
+			console.log("Hashes match!");
+			res.send({'match': false, 'data': data});
+		}
+		else {
+			res.send({'match': true});
+		}
 	}
 	else {
 		console.log('---------------------------------------------------------------------');

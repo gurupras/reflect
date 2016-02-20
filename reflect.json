@@ -1,32 +1,37 @@
 {
-  "vimrc": {
-    "type": "file", 
-    "path": "~/.vimrc"
-  }, 
-  "apt-packages": {
-    "command": "sudo apt-get install", 
-    "packages": "gcc make python python-dev ipython python-pip python-virtualenv git screen tmux vim nano libfreetype6-dev libpng12-dev", 
-    "type": "packages"
-  }, 
-  "tmux-conf": {
-    "type": "file", 
-    "path": "~/.tmux.conf"
-  }, 
-  "screenrc": {
-    "type": "file", 
-    "path": "~/.screenrc"
-  }, 
-  "bashrc": {
-    "type": "file", 
-    "path": "~/.bashrc"
-  }, 
-  "pip": {
-    "command": "sudo pip install", 
-    "packages": "ipdb", 
-    "type": "packages"
-  },
+	"vimrc": {
+		"type": "file",
+		"method": "download",
+		"path": "~/.vimrc"
+	},
+	"apt-packages": {
+		"command": "sudo apt-get install",
+		"packages": "gcc make python python-dev ipython python-pip python-virtualenv git screen tmux vim nano libfreetype6-dev libpng12-dev",
+		"type": "packages"
+	},
+	"tmux-conf": {
+		"method": "download",
+		"type": "file",
+		"path": "~/.tmux.conf"
+	},
+	"screenrc": {
+		"method": "download",
+		"type": "file",
+		"path": "~/.screenrc"
+	},
+	"bashrc": {
+		"type": "file",
+		"method": "download",
+		"path": "~/.bashrc"
+	},
+	"pip": {
+		"command": "sudo pip install",
+		"packages": "ipdb",
+		"type": "packages"
+	},
 	"ssh-config": {
 		"type": "file",
+		"method": "download",
 		"path": "~/.ssh/config"
 	}
 }
